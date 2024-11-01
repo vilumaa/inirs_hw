@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Orders</h2>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Row ID</th>
+    <th>Product Name</th>
+    <th>Quantity</th>
+    <th>Order Subtotal</th>
+    <th>Action</th>
+  </tr>
+  {% for order in orders %}
+    <tr>
+        <td>{{ order.order_id }}</td>
+        <td>{{ order.row_id }}</td>
+        <td>{{ order.product_ordered }}</td>
+        <td>{{ order.quantity_ordered }}</td>
+        <td>{{ order.order_subtotal }}</td>
+        <td></td>
+    </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
+

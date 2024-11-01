@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "srini-hw"
+version = "0.1.0"
+description = ""
+authors = ["priidik_vilumaa <vilumaa@gmail.com>"]
+readme = "README.md"
+packages = [{include = "srini_hw"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytest = "^8.3.3"
+hypothesis = "^6.115.6"
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
