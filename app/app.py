@@ -311,12 +311,11 @@ def get_related_products():
     )
 
 
-@app.route("/order_rows", methods=["GET", "POST"])
+@app.route("/order_rows", methods=["GET"])
 def order_rows():
-    if request.method == "GET":
-        # send list of orders
-        orders = OrderRow.query.all()
-        return render_template("order_rows.html", orders=orders)
+    # send list of orders
+    orders = OrderRow.query.all()
+    return render_template("order_rows.html", orders=orders)
 
 
 if __name__ == "__main__":
